@@ -1,0 +1,20 @@
+[project]
+name = "bpsee-training"
+version = "0.1.0"
+description = "Pipeline de treino/export dos modelos de visao computacional do BPSEE"
+requires-python = ">=3.12"
+
+# Dependencias do treino serao adicionadas na Etapa 5 (ultralytics[export-litert], opencv).
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["training"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

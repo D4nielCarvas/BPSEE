@@ -1,0 +1,42 @@
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# ===== Flutter / Dart (app/) =====
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/build/
+**/generated_plugin_registrant.dart
+**/ephemeral/
+*.log
+
+# ===== Python (training/) =====
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# Datasets e artefatos pesados de treino (NÃO versionar)
+training/datasets/
+training/runs/
+training/weights/
+*.pt
+*.onnx
+
+# Observação: os modelos .tflite finais em app/assets/models SÃO versionados.
+# Se ficarem grandes, migrar para Git LFS (Etapa 9/13).
