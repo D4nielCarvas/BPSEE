@@ -36,8 +36,8 @@ Quebrar o desenvolvimento do protótipo do BPSEE (app Flutter offline com visão
 | 1 | Levantamento de Requisitos | RF/NFR, casos de uso, captura por foto, variedade como input manual, modo de captura, praga-alvo (greening). | Documento de requisitos (`requisitos.md`) aprovado; casos de uso mapeados. | ✅ |
 | 2 | Definição de Arquitetura | Confirmar on-device, Flutter, SQLite local, export TFLite/ONNX; decidir 1 vs 2 modelos (árvore vs folha/fruta); diagrama de componentes e fluxo de dados offline. | Diagrama de arquitetura + fluxo de dados + justificativas documentadas. | ✅ |
 | 3 | Definição de Stack e Ferramental | Flutter, Python/Ultralytics, tflite_flutter ou onnxruntime, Git, Scrum board (issues por etapa). | Matriz de tecnologia aprovada; ferramental instalado e testado. | ✅ |
-| 4 | Setup do Ambiente e Padrões | Repo Git criado, estrutura de pastas, lint/format (Dart + Python), convenções de commit, README de padrões. | Repo inicializado; lint/format rodando; README de padrões publicado. | 🟡 |
-| 5 | Coleta de Imagens | Coletar fotos por modo (árvore: copa; folha e fruta: próximas), várias variedades/estágios/pragas/ângulos/iluminação. | Conjunto bruto de imagens versionado; plano de amostragem documentado. | ⬜ |
+| 4 | Setup do Ambiente e Padrões | Repo Git criado, estrutura de pastas, lint/format (Dart + Python), convenções de commit, README de padrões. | Repo inicializado; lint/format rodando; README de padrões publicado. | ✅ |
+| 5 | Coleta de Imagens | Coletar fotos por modo (árvore: copa; folha e fruta: próximas), várias variedades/estágios/pragas/ângulos/iluminação. | Conjunto bruto de imagens versionado; plano de amostragem documentado. | 🟡 |
 | 6 | Anotação do Dataset | Definir classes de detecção (fruto, greening/doença, estágio de maturação, estado de saúde) e anotar em YOLO — variedade NÃO é classe (input manual). | Dataset anotado e dividido (train/val/test) no formato YOLO, com subconjuntos por modo (árvore / folha-fruta). | ⬜ |
 | 7 | Treinamento do Modelo (YOLOv8) | Treinar e ajustar hiperparâmetros em Python (1 ou 2 modelos conforme Etapa 2). | Modelo treinado com mAP/precision/recall registrados; pesos versionados. | ⬜ |
 | 8 | Validação do Modelo | Avaliar em conjunto de teste e edge cases. | Relatório de validação com métricas e exemplos de falha. | ⬜ |
@@ -61,3 +61,4 @@ Quebrar o desenvolvimento do protótipo do BPSEE (app Flutter offline com visão
 - A Etapa 1 resolveu as perguntas em aberto: captura por **foto**; variedades-alvo (7); praga-alvo (**greening**); variedade como **input manual**; análise **gated por modo** de captura.
 - Cada etapa gerará um **checkpoint verificável** (artefato, teste ou métrica) registrado neste documento.
 - Decisões relevantes serão registradas em `contexto.md` (seção 10).
+- **Pendências do usuário:** (1) criar o remote no GitHub (gh não instalado — criar em github.com e passar a URL, ou instalar `gh` + `gh auth login`); (2) instalar Android Studio + Android SDK antes da Etapa 10/12 (rodar no Android).

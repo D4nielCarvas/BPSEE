@@ -93,6 +93,8 @@ Permitir que produtores, agrônomos e pesquisadores apontem a câmera do celular
 | 27/10/2026 | Stack definida: Flutter 3.47.8, tflite_flutter, Python 3.12 via uv | Etapa 3 aprovada |
 | 27/10/2026 | Flutter via clone git em C:\src\flutter + PATH do usuário | Opção A; `flutter doctor` OK |
 | 27/10/2026 | Repo/Scrum board = GitHub + GitHub Projects | Decisão do usuário |
+| 27/10/2026 | Etapa 4 concluída: git init + commit 859a9fd, .gitignore, ruff, PADRÕES.md | Local; lint Dart+Python OK |
+| 27/10/2026 | Remote GitHub + Android Studio = pendentes do usuário | gh não instalado; auth interativa |
 
 ## 11. Decisões da Etapa 1 (resolvidas)
 
