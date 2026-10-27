@@ -1,0 +1,15 @@
+# Config YOLOv8 para o modelo_arvore (detecção) — Modo Árvore.
+# Classes: 3 classes de maturação do fruto + 2 de saúde da árvore.
+# Anotação: um box por fruto (classe de maturação) + um box em toda a copa (saúde).
+# path é relativo a training/ (onde os scripts rodam).
+path: datasets/arvore
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: fruto_verde
+  1: fruto_maduro
+  2: fruto_sobremaduro
+  3: arvore_saudavel
+  4: arvore_doente
