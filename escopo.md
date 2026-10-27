@@ -18,7 +18,7 @@ Quebrar o desenvolvimento do protótipo do BPSEE (app Flutter offline com visão
 
 ## Legenda de Status
 
-- ⬜ A iniciar — 🟡 Em andamento — ✅ Concluída e verificada
+- ⬜ A iniciar — 🟡 Em andamento (scaffolding pronto, pendente verificação final) — ✅ Concluída e verificada
 
 ## Nota de Escopo (MVP vs Futuro)
 
@@ -38,17 +38,17 @@ Quebrar o desenvolvimento do protótipo do BPSEE (app Flutter offline com visão
 | 3 | Definição de Stack e Ferramental | Flutter, Python/Ultralytics, tflite_flutter ou onnxruntime, Git, Scrum board (issues por etapa). | Matriz de tecnologia aprovada; ferramental instalado e testado. | ✅ |
 | 4 | Setup do Ambiente e Padrões | Repo Git criado, estrutura de pastas, lint/format (Dart + Python), convenções de commit, README de padrões. | Repo inicializado; lint/format rodando; README de padrões publicado. | ✅ |
 | 5 | Coleta de Imagens | Coletar fotos por modo (árvore: copa; folha e fruta: próximas), várias variedades/estágios/pragas/ângulos/iluminação. | Conjunto bruto de imagens versionado; plano de amostragem documentado. | 🟡 |
-| 6 | Anotação do Dataset | Definir classes de detecção (fruto, greening/doença, estágio de maturação, estado de saúde) e anotar em YOLO — variedade NÃO é classe (input manual). | Dataset anotado e dividido (train/val/test) no formato YOLO, com subconjuntos por modo (árvore / folha-fruta). | ⬜ |
-| 7 | Treinamento do Modelo (YOLOv8) | Treinar e ajustar hiperparâmetros em Python (1 ou 2 modelos conforme Etapa 2). | Modelo treinado com mAP/precision/recall registrados; pesos versionados. | ⬜ |
+| 6 | Anotação do Dataset | Definir classes de detecção (fruto, greening/doença, estágio de maturação, estado de saúde) e anotar em YOLO — variedade NÃO é classe (input manual). | Dataset anotado e dividido (train/val/test) no formato YOLO, com subconjuntos por modo (árvore / folha-fruta). | 🟡 |
+| 7 | Treinamento do Modelo (YOLOv8) | Treinar e ajustar hiperparâmetros em Python (1 ou 2 modelos conforme Etapa 2). | Modelo treinado com mAP/precision/recall registrados; pesos versionados. | 🟡 |
 | 8 | Validação do Modelo | Avaliar em conjunto de teste e edge cases. | Relatório de validação com métricas e exemplos de falha. | ⬜ |
-| 9 | Otimização/Exportação On-device | Exportar (TFLite/ONNX), quantizar e medir latência/tamanho no dispositivo-alvo. | Artefato otimizado gerado; latência e tamanho medidos e aceitáveis. | ⬜ |
-| 10 | Flutter — Estrutura Base | Scaffold do app, navegação, temas, configs, ambiente local (emulador/dispositivo). | App compila e roda com navegação básica em Android e iOS. | ⬜ |
-| 11 | Flutter — UI/UX e Telas | Wireframe conjunto (simples); telas de captura com seletor de **variedade** (7) e **modo** (árvore/folha/fruta), resultados, configurações. | Telas implementadas conforme wireframe; acessibilidade básica; seletores funcionais. | ⬜ |
-| 12 | Flutter — Integração com Câmera | Permissões, captura de foto por modo e pré-visualização. | Câmera funcional com permissões e fluxo de captura por modo testado offline. | ⬜ |
-| 13 | Flutter — Execução On-device do Modelo | Carregar modelo TFLite/ONNX e rodar inferência no app (offline), conforme modo. | Inferência retornando resultados no dispositivo; latência medida. | ⬜ |
-| 14 | Flutter — Pós-processamento e Resultados | Traduzir saídas do modelo em UI conforme modo: árvore → contagem/maturação/estimativa/saúde; folha/fruta → doença (greening); variedade vem do seletor. | Resultados apresentados na UI conforme o modo de captura selecionado. | ⬜ |
-| 15 | Persistência Local e Opção de Salvar | SQLite local; política processar-e-descartar com opção de salvar imagem/análise. | Imagem descartada por padrão; salvar opcional funcionando; estrutura para histórico. | ⬜ |
-| 16 | Tratamento de Erros e Acessibilidade | Offline garantido, erros de inferência/câmera, feedback ao usuário, acessibilidade. | Cenários de erro testados; fluxo offline 100% funcional. | ⬜ |
+| 9 | Otimização/Exportação On-device | Exportar (TFLite/ONNX), quantizar e medir latência/tamanho no dispositivo-alvo. | Artefato otimizado gerado; latência e tamanho medidos e aceitáveis. | 🟡 |
+| 10 | Flutter — Estrutura Base | Scaffold do app, navegação, temas, configs, ambiente local (emulador/dispositivo). | App compila e roda com navegação básica em Android e iOS. | 🟡 |
+| 11 | Flutter — UI/UX e Telas | Wireframe conjunto (simples); telas de captura com seletor de **variedade** (7) e **modo** (árvore/folha/fruta), resultados, configurações. | Telas implementadas conforme wireframe; acessibilidade básica; seletores funcionais. | 🟡 |
+| 12 | Flutter — Integração com Câmera | Permissões, captura de foto por modo e pré-visualização. | Câmera funcional com permissões e fluxo de captura por modo testado offline. | 🟡 |
+| 13 | Flutter — Execução On-device do Modelo | Carregar modelo TFLite/ONNX e rodar inferência no app (offline), conforme modo. | Inferência retornando resultados no dispositivo; latência medida. | 🟡 |
+| 14 | Flutter — Pós-processamento e Resultados | Traduzir saídas do modelo em UI conforme modo: árvore → contagem/maturação/estimativa/saúde; folha/fruta → doença (greening); variedade vem do seletor. | Resultados apresentados na UI conforme o modo de captura selecionado. | 🟡 |
+| 15 | Persistência Local e Opção de Salvar | SQLite local; política processar-e-descartar com opção de salvar imagem/análise. | Imagem descartada por padrão; salvar opcional funcionando; estrutura para histórico. | 🟡 |
+| 16 | Tratamento de Erros e Acessibilidade | Offline garantido, erros de inferência/câmera, feedback ao usuário, acessibilidade. | Cenários de erro testados; fluxo offline 100% funcional. | 🟡 |
 | 17 | Testes (Unit / Integração / E2E) | Testes do app e avaliação do modelo com imagens reais em campo. | Suíte de testes verde; relatório de acurácia em campo. | ⬜ |
 | 18 | CI/CD e Build Local | Automatizar build/testes e gerar APK + build iOS para apresentação. | Pipeline local verde; APK e build iOS gerados. | ⬜ |
 | 19 | Empacotamento e Apresentação do Protótipo | Demo instalável + roteiro de apresentação + documentação. | App instalável; roteiro de demo pronto; protótipo apresentável. | ⬜ |
@@ -61,4 +61,5 @@ Quebrar o desenvolvimento do protótipo do BPSEE (app Flutter offline com visão
 - A Etapa 1 resolveu as perguntas em aberto: captura por **foto**; variedades-alvo (7); praga-alvo (**greening**); variedade como **input manual**; análise **gated por modo** de captura.
 - Cada etapa gerará um **checkpoint verificável** (artefato, teste ou métrica) registrado neste documento.
 - Decisões relevantes serão registradas em `contexto.md` (seção 10).
-- **Pendências do usuário:** (1) criar o remote no GitHub (gh não instalado — criar em github.com e passar a URL, ou instalar `gh` + `gh auth login`); (2) instalar Android Studio + Android SDK antes da Etapa 10/12 (rodar no Android).
+- **Estado atual (27/10/2026):** Etapas 1–4 ✅. Etapas 5–7, 9 e 10–16 com **scaffolding pronto e compilando** (`flutter analyze` limpo; `ruff` limpo; `ultralytics 8.4.191` instalado e importável) — pendem: **coleta de imagens** (Etapa 5, usuário), **anotação/treino/validação/export** (Etapas 6–9, dependem do dataset) e **execução no dispositivo** (Etapas 10–16, dependem do Android Studio/SDK e do modelo real). Etapas 8, 17–20 ainda não iniciadas.
+- **Pendências do usuário:** (1) criar o remote no GitHub (gh não instalado — criar em github.com e passar a URL, ou instalar `gh` + `gh auth login`); (2) instalar Android Studio + Android SDK antes de rodar o app no Android (Etapas 10/12); (3) coletar as imagens em campo conforme `plano_amostragem.md`.
